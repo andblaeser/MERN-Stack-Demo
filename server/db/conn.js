@@ -13,7 +13,7 @@ module.exports = {
             // Verify we got a good "db" object
             if (db) {
                 _db = db.db("employees");
-                console.log("succesfully connected to MongoDB.");
+                console.log("Succesfully connected to MongoDB.");
             }
             return callback(err);
         });
