@@ -8,8 +8,8 @@ export default function Edit() {
         level: "",
         records: [],
     });
-    const params = useParams;
-    const navigate = useNavigate;
+    const params = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function fetchData() {
@@ -17,7 +17,7 @@ export default function Edit() {
             const response = await fetch(`http://localhost:5000/record/${params.id.toString()}`);
 
             if (!response.ok) {
-                const message = `An error has ocurred: ${response.statusText}`;
+                const message = `An error has occurred: ${response.statusText}`;
                 window.alert(message);
                 return;
             }
